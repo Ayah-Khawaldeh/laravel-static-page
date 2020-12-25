@@ -201,6 +201,7 @@
                 color: #007b5e;
                 /* font-weight: bold; */
             }
+
     </style>
 </head>
 
@@ -222,7 +223,7 @@
                     <a class="nav-link" href="">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Services</a>
+                <a class="nav-link" href="{{ url('/att/project-info') }}">Project Info</a>
                 </li>
             </ul>
             @if (Route::has('login'))
@@ -240,78 +241,67 @@
             @endif
         </div>
     </nav>
-    <!-- Team -->
+
     <section id="team" class="pb-5">
         <div class="container">
-            <h5 class="section-title h1">Our Trainees</h5>
+            <h5 class="section-title h1">Profile</h5>
             <div class="row">
                 <!-- Team member -->
-                <?php foreach ($Students as $Key => $value) { ?>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="image-flip">
-                            <div class="mainflip flip-0">
-                                <div class="frontside">
-                                    <div class="card">
-                                        <div class="card-body text-center">
-                                            <p><img class=" img-fluid" src="<?php echo $value['img']  ?>" alt="card image"></p>
-                                            <h4 class="card-title"><?php echo $value['name']  ?></h4>
-                                            <p class="card-text">Hello, I'm Trainee in coding academy by orange</p>
-                                            <p class="card-text">Birthday : <?php echo $value['birthday'] ?></p>
-                                            <a href="" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                                        </div>
+                <div class="col-xs-12 col-sm-6 col-md-12">
+                    <div class="image-flip">
+                        <div class="mainflip flip-0">
+                            <div class="frontside">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <p><img class=" img-fluid" src="<?php echo $Student['img']  ?>" alt="card image"></p>
+                                        <h4 class="card-title"><?php echo $Student['name']  ?></h4>
+                                        <p class="card-text"><?php echo $Student['birthday'] ?></p>
+                                        <p class="card-text">I'm Trainee in coding academy by orange</p>
+                                        <a href="" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                     </div>
                                 </div>
-                                <div class="backside">
-                                    <div class="card">
-                                        <div class="card-body text-center mt-4">
-                                            <a href="/<?php echo $value['id'] ?>">
-                                                <h4><?php echo $value['name']  ?></h4>
-                                            </a>
-                                            <p class="card-text">Hello, I'm Trainee in coding academy by orange Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque nobis ab laboriosam quidem voluptatibus facilis cum, fugit non accusamus ut distinctio numquam, fugiat odio.</p>
-                                            <p class="card-text">Birthday : <?php echo $value['birthday'] ?></p>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item">
-                                                    <a class="social-icon text-xs-center" target="_blank" href="https://www.github.com">
-                                                        <i class="fa fa-github"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com">
-                                                        <i class="fa fa-linkedin"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com">
-                                                        <i class="fa fa-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a class="social-icon text-xs-center" target="_blank" href="https://www.twitter.com">
-                                                        <i class="fa fa-twitter"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card">
+                                    <div class="card-body text-center mt-4">
+                                        <a href="">
+                                            <h4><?php echo $Student['name']  ?></h4>
+                                        </a>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, molestiae sapiente? Corporis fugit voluptatibus vero natus rerum culpa aperiam doloribus esse atque ut quibusdam, tempora eveniet a architecto! A, dolorem laudantium, nemo libero cum commodi dignissimos at ea ut exercitationem est velit dicta fuga, enim ipsa. In quaerat nostrum sunt voluptatem tenetur perspiciatis perferendis et, accusantium itaque repellat facere exercitationem dignissimos placeat fugit soluta, temporibus officia autem. Blanditiis, minima labore. Ratione porro quidem, nostrum tempore eaque iure sunt magni asperiores quibusdam nemo id voluptas est aliquam pariatur architecto dolore obcaecati, reprehenderit ex necessitatibus doloremque. Molestias tenetur soluta, reiciendis perferendis dolorem eos iste saepe fuga reprehenderit magni quam impedit obcaecati, facere ipsa adipisci incidunt alias architecto exercitationem nihil velit explicabo ab.</p>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <a class="social-icon text-xs-center" target="_blank" href="<?php echo $Student['github_account'] ?> ">
+                                                    <i class="fa fa-github"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon text-xs-center" target="_blank" href="<?php echo $Student['linkedin'] ?>">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon text-xs-center" target="_blank" href="https://www.twitter.com">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                <?php } ?>
+                </div>
                 <!-- ./Team member -->
+
             </div>
         </div>
     </section>
     <!-- Team -->
-    <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2020 Copyright:
-            <a class="text-dark" href="https://orange.com/"><span style="color: orange; font-weight:bold;">Orange.com</span></a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-
 </body>
 
 </html>

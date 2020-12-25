@@ -62,6 +62,12 @@ class StudentController extends Controller
         $Students = $this->getAllStudent();
         return view('trainees.att', compact('Students'));
     }
+
+    public function index3()
+    {
+        $Students = $this->getAllStudent();
+        return view('project-info', compact('Students'));
+    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -106,20 +112,23 @@ class StudentController extends Controller
                 'img' => 'https://images.squarespace-cdn.com/content/v1/553d785ae4b0771c9977dc84/1459488162617-9UKNX9ZEZIEZSGSC9MDW/ke17ZwdGBToddI8pDm48kAIQEBwWVv2kUxfH-jJ9Cw17gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmnm4Ek6c6YJYE3gl9iwgPJJQx7fRcieSSJIbmEDf17fcbjyjef3aJkxeOW-A4stSK/image-asset.jpeg?format=1500w',
                 'github_account' => 'https://github.com/oca-class-b',
                 'linkedin' => 'https://www.linkedin.com/feed/',
+                'Dead_line' => '8/11/2020',
+                'Role' => 'Back-End',
                 'projects' => [
                     0 => [
                         'project_name' => 'HTML and CSS',
-                        'is_completed' => 'yes',
+                        'is_completed' => FALSE,
                     ],
                     1 => [
                         'project_name' => 'Wordpress',
-                        'is_completed' => 'no',
+                        'is_completed' => TRUE,
                     ],
                 ],
                 'attendance' => [
                     0 => [
                         'check_in' => '15 dec 2020 08:00',
                         'check_out' => '15 dec 2020 20:00',
+                        
                     ],
                     1 => [
                         'check_in' => '14 dec 2020 8:00',
@@ -134,14 +143,16 @@ class StudentController extends Controller
                 'img' => 'https://i.pinimg.com/originals/af/06/96/af0696411a0c383c3c7f7514f4c40839.jpg',
                 'github_account' => 'https://github.com/oca-class-b',
                 'linkedin' => 'https://www.linkedin.com/feed/',
+                'Dead_line' => '15/12/2020',
+                'Role' => 'Designer',
                 'projects' => [
                     0 => [
                         'project_name' => 'HTML and CSS',
-                        'is_completed' => 'yes',
+                        'is_completed' => TRUE,
                     ],
                     1 => [
                         'project_name' => 'Wordpress',
-                        'is_completed' => 'no',
+                        'is_completed' => TRUE,
                     ],
                 ],
                 'attendance' => [
@@ -162,14 +173,16 @@ class StudentController extends Controller
                 'img' => 'https://data.whicdn.com/images/244840519/original.jpg',
                 'github_account' => 'https://github.com/oca-class-b',
                 'linkedin' => 'https://www.linkedin.com/feed/',
+                'Dead_line' => '4/12/2020',
+                'Role' => 'Front-End',
                 'projects' => [
                     0 => [
                         'project_name' => 'HTML and CSS',
-                        'is_completed' => 'yes',
+                        'is_completed' => FALSE,
                     ],
                     1 => [
                         'project_name' => 'Wordpress',
-                        'is_completed' => 'no',
+                        'is_completed' => TRUE,
                     ],
                 ],
                 'attendance' => [
@@ -186,18 +199,20 @@ class StudentController extends Controller
             [
                 'id' => '3',
                 'name' => 'Aya Khawaldeh',
-                'birthday' => '8 March',
+                'birthday' => '5 March',
                 'img' => 'https://i.pinimg.com/originals/0b/74/bd/0b74bd80e8e45336c753bea61a4feed0.jpg',
                 'github_account' => 'https://github.com/oca-class-b',
                 'linkedin' => 'https://www.linkedin.com/feed/',
+                'Dead_line' => '29/11/2020',
+                'Role' => 'Team Member',
                 'projects' => [
                     0 => [
                         'project_name' => 'HTML and CSS',
-                        'is_completed' => 'yes',
+                        'is_completed' => TRUE,
                     ],
                     1 => [
                         'project_name' => 'Wordpress',
-                        'is_completed' => 'no',
+                        'is_completed' => FALSE,
                     ],
                 ],
                 'attendance' => [
@@ -218,14 +233,16 @@ class StudentController extends Controller
                 'img' => 'https://i.pinimg.com/564x/51/96/b3/5196b34be5aec2079e4b68190299a544.jpg',
                 'github_account' => 'https://github.com/oca-class-b',
                 'linkedin' => 'https://www.linkedin.com/feed/',
+                'Dead_line' => '25/10/2020',
+                'Role' => 'Team Leader',
                 'projects' => [
                     0 => [
                         'project_name' => 'HTML and CSS',
-                        'is_completed' => 'yes',
+                        'is_completed' => FALSE,
                     ],
                     1 => [
                         'project_name' => 'Wordpress',
-                        'is_completed' => 'no',
+                        'is_completed' => FALSE,
                     ],
                 ],
                 'attendance' => [
@@ -246,14 +263,16 @@ class StudentController extends Controller
                 'img' => 'https://i.pinimg.com/564x/86/2a/44/862a449dec25ca5fc4468981d5c311bf.jpg',
                 'github_account' => 'https://github.com/oca-class-b',
                 'linkedin' => 'https://www.linkedin.com/feed/',
+                'Dead_line' => '12/12/2020',
+                'Role' => 'Project Manager',
                 'projects' => [
                     0 => [
                         'project_name' => 'HTML and CSS',
-                        'is_completed' => 'yes',
+                        'is_completed' => TRUE,
                     ],
                     1 => [
                         'project_name' => 'Wordpress',
-                        'is_completed' => 'no',
+                        'is_completed' => FALSE,
                     ],
                 ],
                 'attendance' => [
